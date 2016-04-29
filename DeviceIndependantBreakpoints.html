@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Device-independant break points.</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <style>
+  body {
+    font-size:16px;
+  }
+.cTestCol {
+  color:green;
+  display:inline-block;
+  width:30%;
+  font-size:16px;
+  font-weight:normal;
+  padding:1em;
+}
+
+.cBigBold {
+  font-size:24px;
+  font-weight:bold;
+  color:red;
+}
+  </style>
+</head>
+<body><br>
+<div class="container-fluid">
+  <header class='well'><p>Allthough there are codified media-query breakpoints in Bootstrap, there is another (sometimes better) way to address responsiveness.</p>
+<p>There is no reason why natural break points cannot be implemented using media queries.  For example, lets say that you have a design
+  which takens up 3 columns on a desktop. If a column contains more than one word in the title, then a media query can be designed so
+  that stacking occurs just before the page width contracts enough to cause the two header words to split.</p>
+  <p>There are a couple of contitions that must be met in order for this to work.  First, the font size must be in units that can be depended on
+    when calculating breakpoints.  For simplicity, I will use "px".  For single
+    to conform to the desired width.  Here is an example </p>
+  </header>
+  <div>
+    <div class='cTestCol'><span class='cBigBold'>Column 1 has a long title</span><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci libero placeat obcaecati officia, eveniet laboriosam maxime repudiandae rerum! Dolores voluptatum illo recusandae ipsam quos ullam nobis aliquam distinctio temporibus.</div>
+    <div class='cTestCol'><span class='cBigBold'>Column 2 short title</span><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At pariatur animi delectus sint ea commodi eius dolorem esse, ducimus suscipit in ut excepturi quos accusantium debitis cumque? Eius, eveniet distinctio.</div>
+    <div class='cTestCol'><span class='cBigBold'>Column 3 is an even longer title</span><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus inventore fuga delectus tempore sed autem deleniti. Non illo tenetur sapiente dignissimos, mollitia beatae quo excepturi ullam eveniet, unde blanditiis minima.</div>
+
+  </div>
+  </div>
+</body>
+</html>
