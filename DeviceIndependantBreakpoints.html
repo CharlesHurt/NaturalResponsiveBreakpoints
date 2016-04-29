@@ -2,33 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Device-independant break points.</title>
+<title>Device-independant breakpoints</title>
 <meta name='viewport' content='width=device-width'>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
   integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <style>
+
 body {
   font-size:16px;
 }
 
 section {
   vertical-align:top;
-}
-
-
-
-
-@media screen and (max-width:1900px) {
-  #idCol3 {
-     display:block;
-  }
-}
-@media screen and (max-width:1520px) {
-  #idCol2 {
-     display:block;
-  }
 }
 
 .cTestCol {
@@ -45,11 +32,26 @@ section {
   font-weight:bold;
   color:red;
 }
+
+.cBold {
+  font-weight:bold;
+}
+
+@media screen and (max-width:1900px) {
+  #idCol3 {
+     display:block;
+  }
+}
+@media screen and (max-width:1520px) {
+  #idCol2 {
+     display:block;
+  }
+}
 </style>
 </head>
 <body><br>
 <div class="container-fluid">
-  <header class='well'><h1>Device-Independent Responsive Breakpoints.</h1>
+  <header class='well'><h1>Device-Independent Responsive Breakpoints</h1>
     <p>Allthough there are codified media breakpoints in Bootstrap, there is another (sometimes better) way to address responsiveness.</p>
 
     <p>"Natural" break points can be implemented using media queries.  For example, lets say that you have a design
@@ -67,7 +69,7 @@ section {
        forces the column to stack vertically, instead of word wrapping the title.
        This is done using "display:block" at smaller window widths.</p>
   </header>
-  <div>This section wraps text as window size shrinks:<br>
+  <div><span class="cBold">This section wraps text as window size shrinks:</span><br>
     <section class='cTestCol'><h1  >Column 1 has a long title</h1>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci libero
       placeat obcaecati officia, eveniet laboriosam maxime repudiandae rerum! Dolores
@@ -82,7 +84,7 @@ section {
       dignissimos, mollitia beatae quo excepturi ullam eveniet, unde blanditiis minima.</section>
     </div>
 
-<hr>This section stacks according to the natural break points of the content.<br>
+<hr><span class="cBold">This section stacks according to the natural break points of the content:</span><br>
     <div>
       <section class='cTestCol'><h1  >Column 1 has a long title</h1>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci libero
